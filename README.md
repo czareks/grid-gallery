@@ -1,4 +1,4 @@
-# Galeria zdjęć z funkcją pobierania zdjęć za pomocą PHP - README
+# Galeria zdjęć z funkcją pobierania zdjęć za pomocą PHP
 
 To jest projekt galerii zdjęć, który umożliwia pobieranie zdjęć z folderów za pomocą funkcji w PHP i wyświetlanie ich w responsywny sposób. Wykorzystano technologie takie jak HTML, CSS, JavaScript oraz PHP.
 
