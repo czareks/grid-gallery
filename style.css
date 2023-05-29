@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open sans', sans-serif;
+    box-sizing: border-box;
+    background-color: #e2e0e0;
+}
+
+
+/* Menu na pełnym ekranie */
+nav.desktop {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+  }
+  
+  
+  nav.desktop ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav.desktop li {
+    margin-right: 20px;
+  }
+  
+  nav.desktop li:last-child {
+    margin-right: 0;
+  }
+  
+  nav.desktop li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  nav.desktop li.active a {
+    position: relative;
+  }
+  
+  nav.desktop li.active a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+  }
+  
+  nav.desktop li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+
+  nav.mobile{
+    display: none;
+  }
+  
+/* Responsywność dla mniejszych rozdzielczości */
+@media (max-width: 768px) {
+    nav.desktop {
+      display: none;
+    }
+
+    nav.mobile ul {
+        height: 0;
+        overflow: hidden;
+    }
+    
+    nav.mobile .open{
+        height: auto;
+    }
+  
+    nav.mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #333;
+      padding: 20px;
+    }
+  
+    nav.mobile label.menu-icon {
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  
+    nav.mobile ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    nav.mobile li {
+      margin: 30px; /* Zwiększone odstępy między elementami menu */
+      text-align: center;
+    }
+  
+    nav.mobile li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      padding: 10px 20px; /* Zwiększone odstępy wewnątrz elementów menu */
+      background-color: transparent; /* Usunięcie tła dla elementów menu */
+      border-radius: 5px;
+      transition: background-color 0.3s ease; /* Dodanie płynnego przejścia dla tła */
+    }
+  
+    nav.mobile li.active a {
+      font-weight: bold;
+      background-color: #555; /* Tło dla aktywnego elementu menu */
+    }
+  
+    nav.mobile li:hover a {
+      background-color: #555; /* Tło po najechaniu na element menu */
+    }
+  }
+  
+
+/* grid gallery */
+  #grid-gallery {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 10px;
+  }
+  
+  #grid-gallery .gallery-item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-height: 500px;
+  }
+  
+  #grid-gallery .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  #grid-gallery .gallery-item:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  
+  #grid-gallery .gallery-item:hover{
+    opacity: 0.7;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  #grid-gallery {
+    display: grid;
+    grid-gap: 10px; 
+  }
+  
+  #grid-gallery .gallery-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #grid-gallery .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  @media (min-width: 768px) {
+    #grid-gallery {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  }
+  
+  @media (max-width: 767px) {
+    #grid-gallery {
+      grid-template-columns: 1fr; 
+      grid-gap: 30px;
+    }
+  }
+
+
+  footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 18px;
+    color: white;
+  }
+  
+
+
+  /* Stylowanie lightboxa */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  #lightbox-image {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+    margin: 0 auto;
+  }
+
+  h1{
+    font-size: 40px;
+    text-align: center;
+  }
